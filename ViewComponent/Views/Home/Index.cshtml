@@ -3,3 +3,19 @@
 }
 
 <h1>Home</h1>
+
+<button id="btn-click" class="blue-back button">click me to pop</button>
+
+<div class="list put">
+
+</div>
+
+<script>
+
+    document.querySelector("#btn-click").addEventListener("click",async ()=>{
+        var response = await fetch("/Component", { method : "GET"});
+        var getresponse = await response.text();
+        document.querySelector(".put").innerHTML=getresponse;
+    });
+    
+</script>
